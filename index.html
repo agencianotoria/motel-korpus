@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="L'Éclipse - Uma experiência de hospedagem exclusiva. Suítes de luxo, privacidade absoluta e gastronomia premium.">
+    <meta name="description"
+        content="L'Éclipse - Uma experiência de hospedagem exclusiva. Suítes de luxo, privacidade absoluta e gastronomia premium.">
     <title>Motel Korpus | Experiência Exclusiva</title>
 
     <link rel="preload" href="assets/fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -34,73 +36,148 @@
     }
     </script>
 </head>
-<body class="bg-brand-dark text-brand-text font-sans antialiased overflow-x-hidden selection:bg-brand-ruby selection:text-white">
 
-    <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-2xl font-serif font-semibold tracking-widest text-brand-ruby flex items-center gap-2">
-                <i data-lucide="moon" class="w-6 h-6 fill-current"></i>
-                L'ÉCLIPSE
+<body
+    class="bg-brand-dark text-brand-text font-sans antialiased overflow-x-hidden selection:bg-brand-ruby selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-500 h-[80px]" id="navbar">
+
+        <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+
+            <div
+                class="text-2xl font-serif font-semibold tracking-widest text-brand-ruby flex items-center gap-2 leading-none transform translate-y-[-2px]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-6 h-6 fill-current">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+                <span>Motel Korpus</span>
             </div>
 
-            <nav class="hidden md:flex space-x-12 mt-1.5">
-                <a href="#sobre" class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300">Sobre</a>
-                <a href="#suites" class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300">Suítes</a>
-                <a href="#gastronomia" class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300">Gastronomia</a>
-                <a href="#localizacao" class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300">Localização</a>
+            <nav class="hidden md:flex items-center space-x-12 transform translate-y-[1px]">
+                <a href="#sobre"
+                    class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Sobre</a>
+                <a href="#suites"
+                    class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Suítes</a>
+                <a href="#gastronomia"
+                    class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Gastronomia</a>
+                <a href="#localizacao"
+                    class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Localização</a>
             </nav>
 
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none hover:text-brand-ruby transition-colors" aria-label="Abrir Menu">
-                <i data-lucide="menu" class="w-8 h-8"></i>
+            <button id="mobile-menu-btn"
+                class="md:hidden flex items-center justify-center text-white focus:outline-none hover:text-brand-ruby transition-colors"
+                aria-label="Abrir Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-8 h-8">
+                    <path d="M3 5h18" />
+                    <path d="M3 12h18" />
+                    <path d="M3 19h18" />
+                </svg>
             </button>
-        </div>
-
-        <div id="mobile-menu" class="fixed inset-0 bg-brand-dark/98 backdrop-blur-xl z-40 translate-x-full transition-transform duration-500 ease-out flex flex-col justify-center items-center space-y-8 md:hidden">
-            <button id="close-menu-btn" class="absolute top-6 right-6 text-white/50 hover:text-brand-ruby transition-colors" aria-label="Fechar Menu">
-                <i data-lucide="x" class="w-10 h-10"></i>
-            </button>
-            <a href="#sobre" class="text-3xl font-serif text-white hover:text-brand-ruby transition-colors" onclick="closeMenu()">Sobre</a>
-            <a href="#suites" class="text-3xl font-serif text-white hover:text-brand-ruby transition-colors" onclick="closeMenu()">Suítes</a>
-            <a href="#gastronomia" class="text-3xl font-serif text-white hover:text-brand-ruby transition-colors" onclick="closeMenu()">Gastronomia</a>
-            <a href="#localizacao" class="text-3xl font-serif text-white hover:text-brand-ruby transition-colors" onclick="closeMenu()">Localização</a>
         </div>
     </header>
 
+    <div id="mobile-menu"
+        class="fixed inset-0 w-full h-[100dvh] z-[100] invisible opacity-0 transition-all duration-500 ease-in-out block">
+
+        <div class="absolute inset-0 bg-brand-dark/95 backdrop-blur-2xl z-0"></div>
+
+        <div id="close-menu-wrapper"
+            class="absolute top-0 left-0 right-0 max-w-7xl mx-auto w-full px-6 flex justify-end items-center transition-all duration-500 z-50 h-[80px]">
+            <button id="close-menu-btn"
+                class="md:hidden flex items-center justify-center text-white focus:outline-none hover:text-brand-ruby transition-colors group cursor-pointer"
+                aria-label="Fechar Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-8 h-8 transition-transform duration-300 group-hover:rotate-90">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <nav class="relative z-10 w-full h-full flex flex-col justify-center items-center px-6">
+            <div class="flex flex-col space-y-8 text-center w-full">
+
+                <span
+                    class="menu-item opacity-0 translate-y-8 transition-all duration-700 delay-100 text-brand-ruby text-xs tracking-[0.4em] uppercase">Descubra</span>
+
+                <a href="#sobre"
+                    class="menu-link menu-item opacity-0 translate-y-8 transition-all duration-700 delay-150 group">
+                    <span
+                        class="text-4xl font-serif text-white group-hover:text-brand-ruby transition-colors duration-300">Sobre</span>
+                </a>
+
+                <a href="#suites"
+                    class="menu-link menu-item opacity-0 translate-y-8 transition-all duration-700 delay-200 group">
+                    <span
+                        class="text-4xl font-serif text-white group-hover:text-brand-ruby transition-colors duration-300">Suítes</span>
+                </a>
+
+                <a href="#gastronomia"
+                    class="menu-link menu-item opacity-0 translate-y-8 transition-all duration-700 delay-300 group">
+                    <span
+                        class="text-4xl font-serif text-white group-hover:text-brand-ruby transition-colors duration-300">Gastronomia</span>
+                </a>
+
+                <a href="#localizacao"
+                    class="menu-link menu-item opacity-0 translate-y-8 transition-all duration-700 delay-500 group">
+                    <span
+                        class="text-4xl font-serif text-white group-hover:text-brand-ruby transition-colors duration-300">Localização</span>
+                </a>
+
+            </div>
+        </nav>
+    </div>
+
     <main>
-        <section class="relative h-screen flex items-center justify-center bg-brand-dark bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
+        <section
+            class="relative h-screen flex items-center justify-center bg-brand-dark bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-brand-dark"></div>
-            
+
             <div class="relative z-10 text-center px-6 max-w-5xl mx-auto fade-in-section mt-10">
-                <p class="text-brand-ruby uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-bold">O Ápice da Sedução</p>
+                <p class="text-brand-ruby uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-bold">O Ápice da
+                    Sedução</p>
                 <h1 class="text-5xl md:text-7xl lg:text-9xl font-serif text-white mb-8 leading-tight tracking-tight">
                     Paixão <br> <span class="italic text-brand-ruby font-normal">Privada</span>
                 </h1>
-                <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed border-l-2 border-brand-ruby pl-6 text-left md:text-center md:border-l-0 md:pl-0">
-                    Um santuário desenhado para momentos intensos. <br class="hidden md:block"> Design premiado, silêncio absoluto e conforto inigualável.
+                <p
+                    class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed border-l-2 border-brand-ruby pl-6 text-left md:text-center md:border-l-0 md:pl-0">
+                    Um santuário desenhado para momentos intensos. <br class="hidden md:block"> Design premiado,
+                    silêncio absoluto e conforto inigualável.
                 </p>
-                
+
                 <div class="mt-16 animate-pulse">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brand-ruby mx-auto">
-                        <path d="M12 5v14"/><path d="m19 12-7 7-7-7"/>
-                        </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-6 h-6 text-brand-ruby mx-auto">
+                        <path d="M12 5v14" />
+                        <path d="m19 12-7 7-7-7" />
+                    </svg>
                 </div>
             </div>
         </section>
 
         <section id="sobre" class="py-24 md:py-32 bg-brand-dark overflow-hidden relative">
-            <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-gray/30 -skew-x-12 transform translate-x-1/4 z-0 pointer-events-none"></div>
+            <div
+                class="absolute top-0 right-0 w-1/2 h-full bg-brand-gray/30 -skew-x-12 transform translate-x-1/4 z-0 pointer-events-none">
+            </div>
 
             <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div class="relative fade-in-section group">
-                        <div class="absolute -top-4 -left-4 w-32 h-32 border-t-[1px] border-l-[1px] border-brand-ruby/50 transition-all duration-500 group-hover:w-full group-hover:h-full"></div>
-                        <img 
-                            src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80&w=800" 
-                            alt="Interior luxuoso com iluminação suave" 
+                        <div
+                            class="absolute -top-4 -left-4 w-32 h-32 border-t-[1px] border-l-[1px] border-brand-ruby/50 transition-all duration-500 group-hover:w-full group-hover:h-full">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80&w=800"
+                            alt="Interior luxuoso com iluminação suave"
                             class="w-full h-[600px] object-cover filter brightness-75 contrast-125 group-hover:brightness-100 transition-all duration-700 ease-in-out shadow-2xl"
-                            loading="lazy"
-                        >
-                        <div class="absolute -bottom-4 -right-4 w-32 h-32 border-b-[1px] border-r-[1px] border-brand-ruby/50 transition-all duration-500 group-hover:w-full group-hover:h-full"></div>
+                            loading="lazy">
+                        <div
+                            class="absolute -bottom-4 -right-4 w-32 h-32 border-b-[1px] border-r-[1px] border-brand-ruby/50 transition-all duration-500 group-hover:w-full group-hover:h-full">
+                        </div>
                     </div>
 
                     <div class="space-y-8 fade-in-section">
@@ -109,12 +186,14 @@
                             <span class="text-brand-ruby italic">Convencional</span>
                         </h2>
                         <p class="text-gray-400 leading-loose text-lg font-light text-justify">
-                            L'Éclipse não é apenas um lugar para ficar, é um palco para seus desejos. Cada suíte foi desenhada para criar uma atmosfera de mistério, elegância e prazer.
+                            L'Éclipse não é apenas um lugar para ficar, é um palco para seus desejos. Cada suíte foi
+                            desenhada para criar uma atmosfera de mistério, elegância e prazer.
                         </p>
                         <p class="text-gray-400 leading-loose text-lg font-light text-justify">
-                            Roupa de cama em algodão egípcio 1000 fios, iluminação cênica controlada por voz e isolamento acústico de estúdio garantem que o mundo lá fora deixe de existir.
+                            Roupa de cama em algodão egípcio 1000 fios, iluminação cênica controlada por voz e
+                            isolamento acústico de estúdio garantem que o mundo lá fora deixe de existir.
                         </p>
-                        
+
                         <div class="flex items-center space-x-6 pt-6">
                             <div class="flex flex-col">
                                 <span class="text-3xl font-serif text-brand-ruby">24h</span>
@@ -133,55 +212,79 @@
 
         <section id="suites" class="py-24 bg-brand-gray relative">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="text-left mb-20 fade-in-section border-b border-white/5 pb-8 flex justify-between items-end">
+                <div
+                    class="text-left mb-20 fade-in-section border-b border-white/5 pb-8 flex justify-between items-end">
                     <div>
-                        <span class="text-brand-ruby text-sm font-bold tracking-widest uppercase mb-2 block">Diferenciais</span>
+                        <span
+                            class="text-brand-ruby text-sm font-bold tracking-widest uppercase mb-2 block">Diferenciais</span>
                         <h2 class="text-3xl md:text-5xl font-serif text-white">A Excelência em Detalhes</h2>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-brand-ruby fill-current hidden md:block">
-                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>
-                        </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-8 h-8 text-brand-ruby fill-current hidden md:block">
+                        <path
+                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                    </svg>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 border border-white/5 mb-32">
-                    <div class="group p-10 bg-brand-gray hover:bg-brand-dark transition-colors duration-500 fade-in-section relative overflow-hidden">
+                    <div
+                        class="group p-10 bg-brand-gray hover:bg-brand-dark transition-colors duration-500 fade-in-section relative overflow-hidden">
                         <div
                             class="absolute top-0 right-0 w-20 h-20 bg-brand-ruby/5 rounded-bl-full transition-all group-hover:bg-brand-ruby/10">
                         </div>
                         <div class="mb-8 text-brand-ruby">
-                           
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="w-10 h-10 stroke-[1.5]">
-                                <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-10 h-10 stroke-[1.5]">
+                                <path
+                                    d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
+                                <path d="M5 21h14" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-serif text-white mb-4">Suítes Presidenciais</h3>
                         <p class="text-gray-400 font-light leading-relaxed text-sm">
-                            Espaços amplos com piscina aquecida, teto solar retrátil e automação completa. O luxo que você merece.
+                            Espaços amplos com piscina aquecida, teto solar retrátil e automação completa. O luxo que
+                            você merece.
                         </p>
                     </div>
 
-                    <div class="group p-10 bg-brand-gray hover:bg-brand-dark transition-colors duration-500 fade-in-section relative overflow-hidden" style="transition-delay: 100ms;">
-                        <div class="absolute top-0 right-0 w-20 h-20 bg-brand-ruby/5 rounded-bl-full transition-all group-hover:bg-brand-ruby/10"></div>
+                    <div class="group p-10 bg-brand-gray hover:bg-brand-dark transition-colors duration-500 fade-in-section relative overflow-hidden"
+                        style="transition-delay: 100ms;">
+                        <div
+                            class="absolute top-0 right-0 w-20 h-20 bg-brand-ruby/5 rounded-bl-full transition-all group-hover:bg-brand-ruby/10">
+                        </div>
                         <div class="mb-8 text-brand-ruby">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 stroke-[1.5]">
-                                <path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-10 h-10 stroke-[1.5]">
+                                <path d="M7 10h10" />
+                                <path d="M12 15v7" />
+                                <path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-serif text-white mb-4">Gastronomia & Vinhos</h3>
                         <p class="text-gray-400 font-light leading-relaxed text-sm">
-                            Menu assinado por chefs, carta de vinhos selecionada e drinks autorais servidos com total discrição.
+                            Menu assinado por chefs, carta de vinhos selecionada e drinks autorais servidos com total
+                            discrição.
                         </p>
                     </div>
 
-                    <div class="group p-10 bg-brand-gray hover:bg-brand-dark transition-colors duration-500 fade-in-section relative overflow-hidden" style="transition-delay: 200ms;">
-                        <div class="absolute top-0 right-0 w-20 h-20 bg-brand-ruby/5 rounded-bl-full transition-all group-hover:bg-brand-ruby/10"></div>
+                    <div class="group p-10 bg-brand-gray hover:bg-brand-dark transition-colors duration-500 fade-in-section relative overflow-hidden"
+                        style="transition-delay: 200ms;">
+                        <div
+                            class="absolute top-0 right-0 w-20 h-20 bg-brand-ruby/5 rounded-bl-full transition-all group-hover:bg-brand-ruby/10">
+                        </div>
                         <div class="mb-8 text-brand-ruby">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 stroke-[1.5]">
-                                <path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-10 h-10 stroke-[1.5]">
+                                <path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4" />
+                                <path d="m21 2-9.6 9.6" />
+                                <circle cx="7.5" cy="15.5" r="5.5" />
                             </svg>
-                        
+
                         </div>
                         <h3 class="text-xl font-serif text-white mb-4">Privacidade Total</h3>
                         <p class="text-gray-400 font-light leading-relaxed text-sm">
@@ -192,12 +295,14 @@
 
                 <div class="fade-in-section">
                     <div class="text-center mb-16">
-                        <span class="text-brand-ruby text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Tarifas & Períodos</span>
+                        <span class="text-brand-ruby text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Tarifas &
+                            Períodos</span>
                         <h3 class="text-3xl md:text-4xl font-serif text-white">Escolha o seu Momento</h3>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="border border-white/5 bg-brand-dark/50 p-8 hover:border-brand-ruby/50 transition-all duration-300 group flex flex-col items-center text-center">
+                        <div
+                            class="border border-white/5 bg-brand-dark/50 p-8 hover:border-brand-ruby/50 transition-all duration-300 group flex flex-col items-center text-center">
                             <span class="text-gray-500 text-xs uppercase tracking-widest mb-2">Entrada</span>
                             <h4 class="text-xl font-serif text-white mb-6">Executive</h4>
                             <div class="w-full h-px bg-white/10 mb-6"></div>
@@ -216,7 +321,8 @@
                             </ul>
                         </div>
 
-                        <div class="border border-white/5 bg-brand-dark/50 p-8 hover:border-brand-ruby/50 transition-all duration-300 group flex flex-col items-center text-center">
+                        <div
+                            class="border border-white/5 bg-brand-dark/50 p-8 hover:border-brand-ruby/50 transition-all duration-300 group flex flex-col items-center text-center">
                             <span class="text-gray-500 text-xs uppercase tracking-widest mb-2">Conforto</span>
                             <h4 class="text-xl font-serif text-white mb-6">Premium</h4>
                             <div class="w-full h-px bg-white/10 mb-6"></div>
@@ -235,9 +341,11 @@
                             </ul>
                         </div>
 
-                        <div class="border border-brand-ruby/30 bg-brand-dark p-8 transform md:-translate-y-4 shadow-2xl shadow-brand-ruby/10 group flex flex-col items-center text-center relative">
+                        <div
+                            class="border border-brand-ruby/30 bg-brand-dark p-8 transform md:-translate-y-4 shadow-2xl shadow-brand-ruby/10 group flex flex-col items-center text-center relative">
                             <div class="absolute top-0 inset-x-0 h-1 bg-brand-ruby"></div>
-                            <span class="text-brand-ruby text-xs uppercase tracking-widest mb-2 font-bold">Mais Pedida</span>
+                            <span class="text-brand-ruby text-xs uppercase tracking-widest mb-2 font-bold">Mais
+                                Pedida</span>
                             <h4 class="text-2xl font-serif text-white mb-6">Master Spa</h4>
                             <div class="w-full h-px bg-white/10 mb-6"></div>
                             <div class="mb-2">
@@ -255,7 +363,8 @@
                             </ul>
                         </div>
 
-                        <div class="border border-white/5 bg-brand-dark/50 p-8 hover:border-brand-ruby/50 transition-all duration-300 group flex flex-col items-center text-center">
+                        <div
+                            class="border border-white/5 bg-brand-dark/50 p-8 hover:border-brand-ruby/50 transition-all duration-300 group flex flex-col items-center text-center">
                             <span class="text-brand-ruby text-xs uppercase tracking-widest mb-2">Exclusiva</span>
                             <h4 class="text-xl font-serif text-white mb-6">Royal</h4>
                             <div class="w-full h-px bg-white/10 mb-6"></div>
@@ -274,9 +383,10 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="text-center mt-12">
-                         <p class="text-xs text-gray-500 font-light italic">* Valores sujeitos a alteração em datas especiais e feriados.</p>
+                        <p class="text-xs text-gray-500 font-light italic">* Valores sujeitos a alteração em datas
+                            especiais e feriados.</p>
                     </div>
                 </div>
 
@@ -285,51 +395,60 @@
 
         <section class="py-24 bg-brand-dark relative overflow-hidden" id="gastronomia">
             <div class="max-w-7xl mx-auto px-6">
-                
+
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    
+
                     <div class="order-2 lg:order-1 fade-in-section relative z-10">
-                        <span class="text-brand-ruby text-sm font-bold tracking-[0.2em] uppercase mb-4 block">Experiência Sensorial</span>
+                        <span
+                            class="text-brand-ruby text-sm font-bold tracking-[0.2em] uppercase mb-4 block">Experiência
+                            Sensorial</span>
                         <h2 class="text-4xl md:text-6xl font-serif text-white mb-8 leading-tight">
                             Desperte seus <br> <span class="italic text-brand-ruby">Sentidos</span>
                         </h2>
-                        
-                        <p class="text-gray-300 font-light text-lg leading-relaxed mb-8 border-l border-brand-ruby pl-6">
-                            "Não oferecemos apenas um quarto, mas um cenário. Da temperatura exata do champanhe à textura dos lençóis, cada detalhe foi curado para intensificar o prazer."
+
+                        <p
+                            class="text-gray-300 font-light text-lg leading-relaxed mb-8 border-l border-brand-ruby pl-6">
+                            "Não oferecemos apenas um quarto, mas um cenário. Da temperatura exata do champanhe à
+                            textura dos lençóis, cada detalhe foi curado para intensificar o prazer."
                         </p>
 
                         <div class="grid grid-cols-2 gap-4 mb-10">
                             <div class="overflow-hidden h-40 group border border-white/5">
-                                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=400" 
-                                     alt="Taça de vinho em ambiente escuro" 
-                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=400"
+                                    alt="Taça de vinho em ambiente escuro"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             </div>
                             <div class="overflow-hidden h-40 group border border-white/5">
-                                <img src="https://images.unsplash.com/photo-1616627561950-9f84dc2b224d?auto=format&fit=crop&q=80&w=400" 
-                                     alt="Textura de lençóis de luxo" 
-                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <img src="https://images.unsplash.com/photo-1616627561950-9f84dc2b224d?auto=format&fit=crop&q=80&w=400"
+                                    alt="Textura de lençóis de luxo"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             </div>
                         </div>
 
-                        <a href="#contato" class="inline-flex items-center space-x-2 text-white border-b border-brand-ruby pb-1 hover:text-brand-ruby transition-colors group">
+                        <a href="#contato"
+                            class="inline-flex items-center space-x-2 text-white border-b border-brand-ruby pb-1 hover:text-brand-ruby transition-colors group">
                             <span class="uppercase tracking-widest text-sm">Reserve seu Momento</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform group-hover:translate-x-2">
-                                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4 transition-transform group-hover:translate-x-2">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
                             </svg>
                         </a>
                     </div>
 
                     <div class="order-1 lg:order-2 fade-in-section relative">
                         <div class="absolute -inset-4 bg-brand-ruby/20 blur-3xl rounded-full opacity-40"></div>
-                        
+
                         <div class="relative h-[600px] w-full border border-white/10 group overflow-hidden">
-                             <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=800" 
-                                  alt="Ambiente do quarto com iluminação dramática" 
-                                  class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105">
-                             
-                             <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-brand-dark to-transparent">
-                                 <p class="text-white font-serif text-2xl italic opacity-90">"Onde o tempo para."</p>
-                             </div>
+                            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=800"
+                                alt="Ambiente do quarto com iluminação dramática"
+                                class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105">
+
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-brand-dark to-transparent">
+                                <p class="text-white font-serif text-2xl italic opacity-90">"Onde o tempo para."</p>
+                            </div>
                         </div>
                     </div>
 
@@ -340,41 +459,55 @@
         <section id="localizacao" class="py-24 bg-brand-gray relative">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16 fade-in-section">
-                    <span class="text-brand-ruby text-sm font-bold tracking-[0.2em] uppercase mb-4 block">Localização Privilegiada</span>
+                    <span class="text-brand-ruby text-sm font-bold tracking-[0.2em] uppercase mb-4 block">Localização
+                        Privilegiada</span>
                     <h2 class="text-4xl md:text-5xl font-serif text-white">Privacidade no Coração da Cidade</h2>
                 </div>
 
                 <div class="w-full h-[450px] border border-white/5 relative fade-in-section overflow-hidden shadow-2xl">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.145831610427!2d-46.65657158502223!3d-23.56320508468196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1626960000000!5m2!1spt-BR!2sbr" 
-                        class="w-full h-full map-dark-mode hover:filter-none transition-all duration-1000" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.145831610427!2d-46.65657158502223!3d-23.56320508468196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1626960000000!5m2!1spt-BR!2sbr"
+                        class="w-full h-full map-dark-mode hover:filter-none transition-all duration-1000"
+                        style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
-                    
+
                     <div class="absolute inset-0 pointer-events-none border-[16px] border-brand-dark/20"></div>
                 </div>
 
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center fade-in-section">
                     <div class="p-6 border border-white/5 bg-brand-dark hover:border-brand-ruby/30 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brand-ruby mx-auto mb-4">
-                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6 text-brand-ruby mx-auto mb-4">
+                            <path
+                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
                         </svg>
                         <h4 class="text-white font-serif text-lg mb-2">Entrada Discreta</h4>
-                        <p class="text-gray-400 text-sm font-light">Acesso exclusivo pela Rua das Sombras, portão lateral.</p>
+                        <p class="text-gray-400 text-sm font-light">Acesso exclusivo pela Rua das Sombras, portão
+                            lateral.</p>
                     </div>
                     <div class="p-6 border border-white/5 bg-brand-dark hover:border-brand-ruby/30 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brand-ruby mx-auto mb-4">
-                            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6 text-brand-ruby mx-auto mb-4">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
                         </svg>
                         <h4 class="text-white font-serif text-lg mb-2">Aberto 24h</h4>
-                        <p class="text-gray-400 text-sm font-light">Sempre pronto para receber você, a qualquer momento.</p>
+                        <p class="text-gray-400 text-sm font-light">Sempre pronto para receber você, a qualquer momento.
+                        </p>
                     </div>
                     <div class="p-6 border border-white/5 bg-brand-dark hover:border-brand-ruby/30 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brand-ruby mx-auto mb-4">
-                            <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>
-                        </svg>                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6 text-brand-ruby mx-auto mb-4">
+                            <path
+                                d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+                            <circle cx="7" cy="17" r="2" />
+                            <path d="M9 17h6" />
+                            <circle cx="17" cy="17" r="2" />
+                        </svg>
                         <h4 class="text-white font-serif text-lg mb-2">Valet Privativo</h4>
                         <p class="text-gray-400 text-sm font-light">Estacionamento seguro e coberto com manobrista.</p>
                     </div>
@@ -383,59 +516,97 @@
         </section>
     </main>
 
-    <footer id="contato" class="bg-brand-dark pt-24 pb-12 border-t border-white/5 relative">
+    <footer id="contato" class="bg-brand-dark pt-24 pb-8 border-t border-white/5 relative">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-8">
                 <div>
-                    <h2 class="text-4xl font-serif text-white mb-2 tracking-wide">L'ÉCLIPSE</h2>
+                    <h2 class="text-4xl font-serif text-white mb-2 tracking-wide">Motel Korpus</h2>
                     <p class="text-xs uppercase tracking-[0.3em] text-brand-ruby">Motel de Elite</p>
                 </div>
-                
+
                 <div class="flex gap-6">
-                     <a href="#" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:border-brand-ruby hover:text-brand-ruby transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                    <a href="#"
+                        class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:border-brand-ruby hover:text-brand-ruby transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-5 h-5">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                         </svg>
                     </a>
-                    <a href="#" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:border-brand-ruby hover:text-brand-ruby transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    <a href="#"
+                        class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:border-brand-ruby hover:text-brand-ruby transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-5 h-5">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                         </svg>
                     </a>
-                    <a href="#" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:border-brand-ruby hover:text-brand-ruby transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
+                    <a href="#"
+                        class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:border-brand-ruby hover:text-brand-ruby transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-5 h-5">
+                            <path
+                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
                         </svg>
                     </a>
                 </div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/5 pt-12 text-sm font-light text-gray-400">
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/5 pt-12 text-sm font-light text-gray-400">
                 <div class="space-y-4">
                     <h4 class="text-white uppercase tracking-widest text-xs font-bold">Localização</h4>
                     <p class="leading-relaxed">Av. das Estrelas, 5000<br>Jardins, São Paulo - SP<br>CEP 01000-000</p>
                 </div>
                 <div class="space-y-4">
                     <h4 class="text-white uppercase tracking-widest text-xs font-bold">Reservas & Contato</h4>
-                    <p class="leading-relaxed hover:text-brand-ruby transition-colors cursor-pointer">+55 (11) 99999-9999</p>
-                    <p class="leading-relaxed hover:text-brand-ruby transition-colors cursor-pointer">concierge@leclipse.com.br</p>
+                    <p class="leading-relaxed hover:text-brand-ruby transition-colors cursor-pointer">+55 (11)
+                        99999-9999</p>
+                    <p class="leading-relaxed hover:text-brand-ruby transition-colors cursor-pointer">
+                        concierge@leclipse.com.br</p>
                 </div>
                 <div class="space-y-4">
                     <h4 class="text-white uppercase tracking-widest text-xs font-bold">Privacidade</h4>
                     <p class="text-xs leading-relaxed">
-                        Entrada estritamente proibida para menores de 18 anos. Garantimos sigilo absoluto de todos os nossos hóspedes.
+                        Entrada estritamente proibida para menores de 18 anos. Garantimos sigilo absoluto de todos os
+                        nossos hóspedes.
                     </p>
                 </div>
             </div>
 
-            <div class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-4">
-                <p>© 2024 L'Éclipse Motel. Todos os direitos reservados.</p>
-                <p>Designed for Elite.</p>
+            <div
+                class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-4">
+                <p>&copy; <span id="current-year"></span> Motel Korpus. Todos os direitos reservados.</p>
+                <div class="flex items-center gap-2">
+                    <a class="vmoode-signature" aria-label="vmoode" style="--vm-color: #4A5565; --vm-hover: #ffffff;">
+                        <svg width="30" height="30" viewBox="0 0 354.49 259.91">
+                            <path
+                                d="M122.88,130.1c14.75,20.11,29.29,40,43.79,59.74-7,7.59-24.94,16.14-34.15,15.89L77.24,130.2c.55-.86,1-1.74,1.63-2.54q23.59-32.41,47.23-64.8c5-6.83,9.89-13.77,15.39-20.18,19.17-22.35,43.17-36.55,72.37-41.24,25.41-4.07,49.4.51,71.69,13.4,27,15.63,46.56,38,58.72,66.69,11.43,26.91,13.46,54.66,5.15,82.77a135.68,135.68,0,0,1-31.13,54.42c-16.65,17.92-36.26,31.08-60,37.58A98.52,98.52,0,0,1,197,253.52a14.58,14.58,0,0,1-1.49-.83c2.13-1.49,4-2.8,5.93-4.16a135.91,135.91,0,0,0,25.25-23.73,6.25,6.25,0,0,1,5.22-2.7c17.62,0,33.17-6.2,46.94-16.82,22.42-17.3,35.39-40.11,38.16-68.36,1.45-14.77-1.35-29-7.3-42.6C301,74.25,287.22,58.45,268,47.72c-11.74-6.56-24.38-10.28-37.92-9.95-19.24.46-36.19,7.07-51,19.49-7.25,6.1-13,13.41-18.52,21q-17.21,23.56-34.39,47.15C125.15,126.82,124.15,128.29,122.88,130.1Z" />
+                            <path
+                                d="M159.34,6.49c-11.12,7.5-21.12,15.25-29,25.19-3.41,4.28-7,6.08-12.54,6.44-20.34,1.31-37.2,10.55-51.47,24.69-15.08,15-25.06,32.71-28.13,53.93a87.66,87.66,0,0,0,9.26,54.83c7.71,14.58,18,26.94,31.64,36.22,19.85,13.51,41.48,17.76,64.91,11.42,20.09-5.43,35.56-17.27,47.62-34q18.66-25.8,37.4-51.56c.78-1.08,1.49-2.2,2.53-3.75l-44-60.18a66.82,66.82,0,0,1,34-15.94L277.3,130c-3.61,5-7.2,10.08-10.85,15.09q-15,20.52-30,41c-7,9.57-13.77,19.39-21.25,28.6a123,123,0,0,1-37.79,30.72,118.82,118.82,0,0,1-34.66,12.43,103.73,103.73,0,0,1-61.9-7C52.42,238.41,31.44,218,16.41,191.1A129.19,129.19,0,0,1,2.25,152.84a118.89,118.89,0,0,1,3.2-58.56,136.94,136.94,0,0,1,44.8-66.72C72.59,9.16,98-.92,127.38.13a119.39,119.39,0,0,1,28,4.78C156.52,5.23,157.57,5.77,159.34,6.49Z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
+    <script src="https://vmoode.com/scripts/badge.js" async></script>
     <script type="module" src="scripts/main.js"></script>
 
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-brand-ruby text-white shadow-lg shadow-brand-ruby/20 transition-all duration-500 opacity-0 invisible translate-y-4 hover:bg-white hover:text-brand-ruby hover:-translate-y-1 focus:outline-none cursor-pointer"
+        aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+            <path d="m5 12 7-7 7 7" />
+            <path d="M12 19V5" />
+        </svg>
+    </button>
 
 </body>
+
 </html>
