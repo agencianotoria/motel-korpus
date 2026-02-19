@@ -127,4 +127,20 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearElement.textContent = new Date().getFullYear();
     }
 
+    const lgpdPopup = document.getElementById('lgpd-popup');
+    const lgpdAgreeBtn = document.getElementById('lgpd-agree-btn');
+
+    if (lgpdPopup && !localStorage.getItem('lgpd_consent')) {
+        setTimeout(() => {
+            lgpdPopup.classList.remove('translate-y-full');
+        }, 1500);
+    }
+
+    if (lgpdAgreeBtn) {
+        lgpdAgreeBtn.addEventListener('click', () => {
+            lgpdPopup.classList.add('translate-y-full');
+            localStorage.setItem('lgpd_consent', 'true');
+        });
+    }
+
 });

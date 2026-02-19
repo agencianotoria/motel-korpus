@@ -8,12 +8,24 @@ const galleryData = {
         "https://images.unsplash.com/photo-1616627561950-9f84dc2b224d?auto=format&fit=crop&q=80&w=1200"
     ],
     acqua: [
-        "https://images.unsplash.com/photo-1616627561950-9f84dc2b224d?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1542314831-c6a4d14d8628?auto=format&fit=crop&q=80&w=1200"
+        "/assets/imagens/galeria/acqua/MOTEL KORPUS-2-3.webp",
+        "/assets/imagens/galeria/acqua/MOTEL KORPUS-2-16.webp",
+        "/assets/imagens/galeria/acqua/MOTEL KORPUS-2-22.webp",
+        "/assets/imagens/galeria/acqua/MOTEL KORPUS-2-27.webp",
+        "/assets/imagens/galeria/acqua/MOTEL KORPUS-2-36.webp",
+        "/assets/imagens/galeria/acqua/MOTEL KORPUS-2-41.webp",
+        "/assets/imagens/galeria/acqua/MOTEL KORPUS-2-48.webp",
+        "/assets/imagens/galeria/acqua/MOTEL KORPUS-2-54.webp"
     ],
     arabe: [
-        "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80&w=1200"
+        "/assets/imagens/galeria/arabe/MOTEL KORPUS-2-30.webp",
+        "/assets/imagens/galeria/arabe/MOTEL KORPUS-2-32.webp",
+        "/assets/imagens/galeria/arabe/MOTEL KORPUS-2-34.webp",
+        "/assets/imagens/galeria/arabe/MOTEL KORPUS-2.webp",
+        "/assets/imagens/galeria/arabe/MOTEL KORPUS-2-11.webp",
+        "/assets/imagens/galeria/arabe/MOTEL KORPUS-2-19.webp",
+        "/assets/imagens/galeria/arabe/MOTEL KORPUS-2-23.webp",
+        "/assets/imagens/galeria/arabe/MOTEL KORPUS-2-25.webp"
     ],
     absolut: [
         "https://images.unsplash.com/photo-1542314831-c6a4d14d8628?auto=format&fit=crop&q=80&w=1200",
@@ -51,7 +63,6 @@ function openGallery(suite) {
         modal.classList.remove('opacity-0');
     });
 
-    // Passamos 'true' para avisar que é a primeira foto ao abrir, assim não há atraso
     loadImage(true); 
 }
 
@@ -66,7 +77,6 @@ function closeGallery() {
 }
 
 function loadImage(isInitialLoad = false) {
-    // 1. Apaga a imagem atual
     mainImage.classList.add('opacity-0');
     
     if (!isInitialLoad) {
@@ -75,7 +85,6 @@ function loadImage(isInitialLoad = false) {
     
     counterCurrent.textContent = currentIndex + 1;
 
-    // 2. Define o tempo de espera: instantâneo se for a primeira vez, 300ms se for nas setas
     const delay = isInitialLoad ? 0 : 300;
 
     setTimeout(() => {
@@ -88,7 +97,6 @@ function loadImage(isInitialLoad = false) {
                 loader.classList.add('hidden');
             }
             
-            // 3. Dá uma micro pausa pro navegador renderizar a nova foto e faz o fade-in suave
             setTimeout(() => {
                 mainImage.classList.remove('opacity-0');
             }, 50);
@@ -130,3 +138,27 @@ document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') prevImage();
     }
 });
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+modal.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+modal.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    
+    if (touchStartX - touchEndX > swipeThreshold) {
+        nextImage();
+    }
+    
+    if (touchEndX - touchStartX > swipeThreshold) {
+        prevImage();
+    }
+}
