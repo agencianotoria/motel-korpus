@@ -1,11 +1,22 @@
 const galleryData = {
     clima: [
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1200"
+        "/assets/imagens/galeria/clima/MOTEL KORPUS-4746.webp",
+        "/assets/imagens/galeria/clima/MOTEL KORPUS-4749.webp",
+        "/assets/imagens/galeria/clima/MOTEL KORPUS-4751.webp",
+        "/assets/imagens/galeria/clima/MOTEL KORPUS-4754.webp",
+        "/assets/imagens/galeria/clima/MOTEL KORPUS-4756.webp",
+        "/assets/imagens/galeria/clima/MOTEL KORPUS-4761.webp",
+        "/assets/imagens/galeria/clima/MOTEL KORPUS-4764.webp"
     ],
     prime: [
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1616627561950-9f84dc2b224d?auto=format&fit=crop&q=80&w=1200"
+        "/assets/imagens/galeria/prime/MOTEL KORPUS-2-3.webp",
+        "/assets/imagens/galeria/prime/MOTEL KORPUS-2-16.webp",
+        "/assets/imagens/galeria/prime/MOTEL KORPUS-2-22.webp",
+        "/assets/imagens/galeria/prime/MOTEL KORPUS-2-27.webp",
+        "/assets/imagens/galeria/prime/MOTEL KORPUS-2-36.webp",
+        "/assets/imagens/galeria/prime/MOTEL KORPUS-2-41.webp",
+        "/assets/imagens/galeria/prime/MOTEL KORPUS-2-48.webp",
+        "/assets/imagens/galeria/prime/MOTEL KORPUS-2-54.webp"
     ],
     acqua: [
         "/assets/imagens/galeria/acqua/MOTEL KORPUS-2-3.webp",
@@ -28,12 +39,24 @@ const galleryData = {
         "/assets/imagens/galeria/arabe/MOTEL KORPUS-2-25.webp"
     ],
     absolut: [
-        "https://images.unsplash.com/photo-1542314831-c6a4d14d8628?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=1200"
+        "/assets/imagens/galeria/absolut/MOTEL KORPUS-2-30.webp",
+        "/assets/imagens/galeria/absolut/MOTEL KORPUS-2-32.webp",
+        "/assets/imagens/galeria/absolut/MOTEL KORPUS-2-34.webp",
+        "/assets/imagens/galeria/absolut/MOTEL KORPUS-2.webp",
+        "/assets/imagens/galeria/absolut/MOTEL KORPUS-2-11.webp",
+        "/assets/imagens/galeria/absolut/MOTEL KORPUS-2-19.webp",
+        "/assets/imagens/galeria/absolut/MOTEL KORPUS-2-23.webp",
+        "/assets/imagens/galeria/absolut/MOTEL KORPUS-2-25.webp"
     ],
     korpus: [
-        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=1200"
+        "/assets/imagens/galeria/korpus/MOTEL KORPUS-2-30.webp",
+        "/assets/imagens/galeria/korpus/MOTEL KORPUS-2-32.webp",
+        "/assets/imagens/galeria/korpus/MOTEL KORPUS-2-34.webp",
+        "/assets/imagens/galeria/korpus/MOTEL KORPUS-2.webp",
+        "/assets/imagens/galeria/korpus/MOTEL KORPUS-2-11.webp",
+        "/assets/imagens/galeria/korpus/MOTEL KORPUS-2-19.webp",
+        "/assets/imagens/galeria/korpus/MOTEL KORPUS-2-23.webp",
+        "/assets/imagens/galeria/korpus/MOTEL KORPUS-2-25.webp"
     ]
 };
 
