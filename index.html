@@ -137,8 +137,12 @@
     <main>
         <section class="relative h-screen flex items-center justify-center bg-brand-dark overflow-hidden">
         
-            <img src="/assets/imagens/banner-01.webp" alt="Motel Korpus" fetchpriority="high" decoding="sync" width="1920" height="1080"
-                class="absolute inset-0 w-full h-full object-cover z-0">
+            <picture class="absolute inset-0 w-full h-full z-0">
+                <source media="(min-width: 768px)" srcset="/assets/imagens/banner-01.webp">
+        
+                <img src="/assets/imagens/banner-mobile-01.webp" alt="Motel Korpus" fetchpriority="high" decoding="sync"
+                    class="w-full h-full object-cover">
+            </picture>
         
             <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/30 to-[#0a0a0a] z-10"></div>
         
@@ -153,7 +157,7 @@
         
                 <p
                     class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed border-l-2 border-brand-ruby pl-6 text-left md:text-center md:border-l-0 md:pl-0">
-                    O refúgio ideal onde a discrição absoluta encontra<br>o conforto que você merece. <br
+                    O refúgio ideal onde a discrição absoluta encontra o conforto que você merece. <br
                         class="hidden md:block"> Surpreenda-se com nossas suítes temáticas.
                 </p>
         
@@ -274,7 +278,7 @@
                         <h3 class="text-xl font-serif text-white mb-4">Restaurante 24h</h3>
                         <p class="text-gray-400 font-light leading-relaxed text-sm">
                             Pratos especiais, almoço e jantar servidos das 6h às 22h. Durante a madrugada, aproveite
-                            nosso menu exclusivo de petiscos e sanduíches rápidos.
+                            nosso menu exclusivo de petiscos e lanches rápidos.
                         </p>
                     </div>
 

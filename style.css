@@ -22,9 +22,6 @@
   font-display: swap;
 }
 
-/* ==========================================
-   2. FONTES LOCAIS (PLAYFAIR DISPLAY)
-========================================== */
 @font-face {
   font-family: 'Playfair Display';
   src: url('./assets/fonts/playfair-display-v40-latin-regular.woff2') format('woff2');
@@ -60,7 +57,6 @@
 @import "tailwindcss";
 
 @theme {
-  /* Substituindo as fontes padrão do Tailwind pelas suas locais! */
   --font-sans: "Inter", sans-serif;
   --font-serif: "Playfair Display", serif;
 
@@ -90,19 +86,16 @@
     transform: none;
 }
 
-/* Truque CSS para mapa escuro sem API Key */
 .map-dark-mode {
     filter: grayscale(100%) invert(92%) contrast(83%);
     mix-blend-mode: hard-light;
 }
 
-/* Seleção de texto na cor da marca (Rubi) */
 ::selection {
     background: #A21D20;
     color: #ffffff;
 }
 
-/* Scrollbar customizada para combinar */
 ::-webkit-scrollbar {
     width: 8px;
 }

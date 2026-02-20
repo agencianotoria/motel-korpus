@@ -69,19 +69,15 @@ const mainImage = document.getElementById('gallery-image');
 const counterCurrent = document.getElementById('gallery-counter');
 const counterTotal = document.getElementById('gallery-total');
 const loader = document.getElementById('gallery-loader');
-
 let currentSuite = '';
 let currentIndex = 0;
 
 function openGallery(suite) {
     currentSuite = suite;
     currentIndex = 0;
-    
     counterTotal.textContent = galleryData[currentSuite].length;
-    
     document.body.style.overflow = 'hidden';
     modal.classList.remove('hidden');
-    
     requestAnimationFrame(() => {
         modal.classList.remove('opacity-0');
     });
@@ -107,13 +103,11 @@ function loadImage(isInitialLoad = false) {
     }
     
     counterCurrent.textContent = currentIndex + 1;
-
     const delay = isInitialLoad ? 0 : 300;
 
     setTimeout(() => {
         const img = new Image();
         img.src = galleryData[currentSuite][currentIndex];
-        
         img.onload = () => {
             mainImage.src = img.src;
             if (!isInitialLoad) {
@@ -149,7 +143,6 @@ triggers.forEach(trigger => {
 closeBtn.addEventListener('click', closeGallery);
 nextBtn.addEventListener('click', nextImage);
 prevBtn.addEventListener('click', prevImage);
-
 modal.addEventListener('click', (e) => {
     if (e.target === modal) closeGallery();
 });
