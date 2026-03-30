@@ -81,16 +81,29 @@
                 </div>
             </a>
 
-            <nav class="hidden md:flex items-center space-x-12 transform translate-y-[1px]">
-                <a href="#sobre"
-                    class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Sobre</a>
-                <a href="#tarifas"
-                    class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Tarifas</a>
-                <a href="#galeria"
-                    class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Galeria</a>
-                <a href="#localizacao"
-                    class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Localização</a>
-            </nav>
+            <div class="hidden md:flex items-center space-x-10 transform translate-y-[1px]">
+                <nav class="flex items-center space-x-10">
+                    <a href="#sobre"
+                        class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Sobre</a>
+                    <a href="#tarifas"
+                        class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Tarifas</a>
+                    <a href="#galeria"
+                        class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Galeria</a>
+                    <a href="#localizacao"
+                        class="text-xs uppercase tracking-[0.2em] font-medium hover:text-brand-ruby transition-colors duration-300 leading-none">Localização</a>
+                </nav>
+                <a href="https://maps.app.goo.gl/JkwPZyef6AHjDmur8" target="_blank" rel="noopener noreferrer"
+                    class="px-6 py-3 bg-brand-ruby text-white text-xs tracking-[0.2em] uppercase font-bold hover:bg-white hover:text-brand-ruby transition-colors duration-300 flex items-center gap-2 group cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="transition-transform">
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>Como Chegar</span>
+                </a>
+            </div>
 
             <button id="mobile-menu-btn"
                 class="md:hidden flex items-center justify-center text-white focus:outline-none hover:text-brand-ruby transition-colors"
@@ -154,6 +167,20 @@
                     <span
                         class="text-4xl font-serif text-white group-hover:text-brand-ruby transition-colors duration-300">Localização</span>
                 </a>
+
+                <div class="menu-item opacity-0 translate-y-8 transition-all duration-700 delay-700 pt-8 flex justify-center w-full">
+                    <a href="https://maps.app.goo.gl/JkwPZyef6AHjDmur8" target="_blank" rel="noopener noreferrer"
+                        class="w-full max-w-[250px] px-8 py-4 bg-brand-ruby text-white text-sm tracking-[0.2em] uppercase font-bold hover:bg-white hover:text-brand-ruby transition-colors duration-300 flex items-center justify-center gap-3 group cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="transition-transform">
+                            <path
+                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>Como Chegar</span>
+                    </a>
+                </div>
 
             </div>
         </nav>
@@ -815,16 +842,12 @@
                         </p>
                     </div>
 
-                    <div
-                        class="group w-full h-[400px] lg:h-[450px] relative overflow-hidden border-t lg:border-t-0 lg:border-l border-white/5">
+                    <div class="w-full h-[400px] lg:h-[450px] relative overflow-hidden border-t lg:border-t-0 lg:border-l border-white/5">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.988685352152!2d-38.34977157435982!3d-12.908448594314981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716165ac45923e9%3A0xfabecf86985169b2!2sMotel%20Korpus!5e0!3m2!1spt-BR!2sbr!4v1771433937598!5m2!1spt-BR!2sbr"
-                            class="w-full h-full map-dark-mode group-hover:!filter-none transition-all duration-1000"
-                            style="border:0;" allowfullscreen="" loading="lazy"
+                            class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
-
-                        <div class="absolute inset-0 pointer-events-none border-[16px] border-brand-dark/20 z-20"></div>
                     </div>
                 </div>
 
